@@ -1,9 +1,9 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -100,8 +100,127 @@ a {
   text-decoration: none;
 }
 
+body::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 20px;
+
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  box-shadow: none;
+  border-radius: 20px;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
 }
+
+.PhoneInput {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+  margin-bottom: 2em;
+}
+
+.PhoneInputCountry {
+  width: 20%;
+  left: 0;
+  position: relative;
+  height: 55px;
+  border: 0.5px dashed #7d5930;
+}
+.PhoneInputCountry select {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 41.67px;
+  z-index: 111;
+  opacity: 0;
+}
+.PhoneInputCountry img {
+  position: absolute;
+  bottom: 00;
+  z-index: 11;
+  height: 41.67px;
+  width: 100%;
+  margin-bottom: 0.4em;
+}
+.PhoneInputInput {
+  width: 75%;
+  left: 126px;
+  height: 55px;
+  top: 359px;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  color: rgba(2, 2, 2, 0.3);
+  border: 0.5px dashed #7d5930;
+  border-radius: 7px;
+  padding: 0 1em;
+  outline: none;
+
+  /* margin-bottom: 2em; */
+}
+svg.PhoneInputCountryIconImg {
+  position: absolute;
+  bottom: 00;
+  z-index: 11;
+  height: 41.67px;
+  width: 100%;
+  margin-bottom: 0.4em;
+}
+
+/* .PhoneInputCountry {
+    position: relative;
+    align-self: stretch;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    margin-right: 0.35em;
+    margin-right: 10px;
+}
+.PhoneInputCountrySelect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    border: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+input:not(.react-phone-number-input__input) {
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-radius: 0.2em;
+    border: 1px solid #cfcfcf;
+    background-color: #fcfcfc;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+} */

@@ -11,7 +11,7 @@ const Sidebar = () => {
       <div className={styles.sideCon}>
         <CgProfile className={styles.cartIcon} /> <span>Account</span>
       </div>
-      <div className={styles.sideCon}>
+      <div className={styles.active}>
         <GiPadlock className={styles.cartIcon} /> <span>Password</span>
       </div>
       <div className={styles.sideCon}>

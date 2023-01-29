@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.css";
 import Nav from "@/components/Nav";
 import { BsFillPlayFill } from "react-icons/bs";
 import Link from "next/link";
+import Loading from "@/components/loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <Loading />
         <Nav />
         <section className={styles.header}>
           <div className={styles.headCap}>

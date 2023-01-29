@@ -36,8 +36,43 @@
   font-weight: 600;
   font-size: 25px;
   line-height: 31px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: rgba(2, 2, 2, 0.3);
+}
+.active {
+  margin: 1em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: rgba(2, 2, 2, 0.3);
+  cursor: pointer;
 }
 
+.active span {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #7d5930;
+}
+
+.active .cartIcon {
+  color: #7d5930;
+}
 .profileCap {
   margin: 1em 0;
 }

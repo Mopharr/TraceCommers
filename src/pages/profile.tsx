@@ -2,27 +2,23 @@ import Nav from "@/components/Nav";
 import Sidebar from "@/components/Sidebar";
 import React, { useState } from "react";
 import styles from "../styles/profile.module.css";
-import { PassContent, PassTitle} from '../components/passProfile'
+import { PassContent, PassTitle } from "../components/passProfile";
 
-const profile = () => {
-    const [tog, setTog] = useState("1")
+const Profile = () => {
+  const [tog, setTog] = useState("1");
 
-    const handleTog = (e:any) => {
-        setTog(e.target.id)
-    }
+  const handleTog = (e: any) => {
+    setTog(e.target.id);
+  };
 
-    interface TogglePros {
-        tog: any,
-        handleTog: boolean
-    }
-
+  
   return (
     <div className={styles.profile}>
       <Nav />
 
       <div className={styles.profileCap}>
         <div className={styles.top}>
-            {/* <PassTitle /> */}
+          {/* <PassTitle /> */}
           <h3> Privacy Settings</h3>
           <p>Change your profile and account settings</p>
         </div>
@@ -35,7 +31,8 @@ const profile = () => {
             <div className={styles.bottomInput}>
               <h4>Reset Password</h4>
               <p>
-                By resetting your password, your old <br /> password becomes invalid.{" "}
+                By resetting your password, your old <br /> password becomes
+                invalid.{" "}
               </p>
 
               <form action="" className={styles.input}>
@@ -52,4 +49,4 @@ const profile = () => {
   );
 };
 
-export default profile;
+export default Profile;

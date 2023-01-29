@@ -1,5 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:display=swap");
 
+.message {
+  position: absolute;
+  top: 13%;
+  background: green;
+  color: #fff;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.messageIcon {
+  font-size: 20px;
+  color: #fff;
+}
+.error {
+  position: absolute;
+  top: 13%;
+  background: red;
+  color: #fff;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.messageIcon {
+  font-size: 20px;
+  color: #fff;
+}
 .sign {
   background-color: #f5f5f5;
   padding: 2em 1em;
@@ -111,6 +163,7 @@
   font-size: 13px;
   line-height: 16px;
   display: flex;
+  cursor: pointer;
   align-items: center;
   justify-content: center;
   letter-spacing: 0.05em;
@@ -131,18 +184,17 @@
   object-fit: contain;
 }
 
-
 @media (max-width: 1024px) {
-    .signCap img{
-        display: none;
-    }
-    .signInput {
-            width: 100%;
-    }
+  .signCap img {
+    display: none;
+  }
+  .signInput {
+    width: 100%;
+  }
 }
 
 @media (max-width: 500px) {
-    .input {
-        width: 98%;
-    }
+  .input {
+    width: 98%;
+  }
 }
