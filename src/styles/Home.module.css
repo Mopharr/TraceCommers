@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:display=swap");
 
 .main {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   padding: 2em 1em;
   margin: 0;
 }
@@ -24,7 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 40%;
+  width: 50%;
 }
 
 .activeNav {

@@ -58,7 +58,9 @@ const Nav = () => {
         </div>
         <div className={styles.cart}>
           <AiOutlineSearch className={styles.cartIcon} />
-          <AiOutlineShoppingCart className={styles.cartIcon} />
+          <Link href="/cart">
+            <AiOutlineShoppingCart className={styles.cartIcon} />
+          </Link>
           <Link href="/profile">
             <CgProfile className={styles.cartIcon} />
           </Link>
