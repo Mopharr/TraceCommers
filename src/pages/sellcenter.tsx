@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import React, { useState } from "react";
 import styles from "../styles/center.module.css";
 import PhoneInput from "react-phone-number-input";
+import Link from "next/link";
 
 const Sellcenter = () => {
   const [time, setTime] = useState();
@@ -90,7 +91,9 @@ const Sellcenter = () => {
 
               // onChange={setTime}
             /> */}
-            <button type="submit">Continue</button>
+            <button type="submit">
+              <Link href="/business">Continue</Link>
+            </button>
           </div>
         </form>
       </div>

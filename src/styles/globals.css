@@ -101,21 +101,21 @@ a {
 }
 
 body::-webkit-scrollbar {
-  width: 5px;
-  border-radius: 20px;
+  width: 0;
+  border-radius: 0;
 
 }
 
 /* Track */
 body::-webkit-scrollbar-track {
   box-shadow: none;
-  border-radius: 20px;
+  border-radius: 0;
 }
 
 /* Handle */
 body::-webkit-scrollbar-thumb {
-  background: red;
-  border-radius: 20px;
+  background: white;
+  border-radius: 0;
 }
 
 /* Handle on hover */
@@ -190,37 +190,3 @@ svg.PhoneInputCountryIconImg {
   width: 100%;
   margin-bottom: 0.4em;
 }
-
-/* .PhoneInputCountry {
-    position: relative;
-    align-self: stretch;
-    width: 60px;
-    display: flex;
-    align-items: center;
-    margin-right: 0.35em;
-    margin-right: 10px;
-}
-.PhoneInputCountrySelect {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    border: 0;
-    opacity: 0;
-    cursor: pointer;
-}
-input:not(.react-phone-number-input__input) {
-    padding-left: 0.4em;
-    padding-right: 0.4em;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    border-radius: 0.2em;
-    border: 1px solid #cfcfcf;
-    background-color: #fcfcfc;
-    outline: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-} */

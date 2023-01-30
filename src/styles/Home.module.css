@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1440px;
+  max-width: 90%;
   margin: auto;
   width: 100%;
 }
@@ -24,9 +24,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 60%;
+  width: 40%;
 }
 
+.activeNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+}
 .navList {
   display: flex;
   align-items: center;
@@ -60,6 +66,9 @@
   background: #7d5930;
   transition: all 0.3s ease-in-out;
 }
+.cancel {
+  display: none;
+}
 
 .active {
   color: #7d5930 !important;
@@ -79,7 +88,25 @@
   transition: all 0.3s ease-in-out;
 }
 
+.open {
+  font-size: 30px;
+  display: none;
+}
+
 .mid select {
+  border: none;
+  background-color: transparent;
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: #7d5930;
+  outline: none;
+}
+
+.activeNav select {
   border: none;
   background-color: transparent;
   font-family: "Quicksand", sans-serif;
@@ -104,8 +131,20 @@
   font-size: 16px;
   cursor: pointer;
 }
+.mobilecart {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.mobilecartIcon {
+  color: rgba(2, 2, 2, 0.3);
+  font-size: 16px;
+  cursor: pointer;
+}
 .line {
-  max-width: 1440px;
+  max-width: 90%;
   margin: 4em auto 0;
   height: 0px;
   border: 0.5px solid rgba(71, 71, 71, 0.5);
@@ -113,7 +152,7 @@
 .header {
   width: 100%;
   height: 630px;
-  max-width: 1440px;
+  max-width: 90%;
   margin: 0.5em auto 2em;
   background: url(/pi.png);
   background-repeat: no-repeat;
@@ -244,5 +283,87 @@
   object-fit: contain;
 }
 
+
+@media (max-width: 1440px) {
+  .main {
+    padding: 2em 0;
+  }
+  .nav,
+  .line,
+  .header {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 900px) {
+  .mid {
+    position: fixed;
+    z-index: 112222;
+    flex-direction: column;
+    right: 0;
+    top: -100%;
+    width: 300px;
+    background-color: #f5f5f5;
+    justify-content: center;
+    height: 500px;
+    gap: 2em;
+    transition: all 0.4s ease-in;
+  }
+  .activeNav {
+    position: fixed;
+    z-index: 112222;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    width: 300px;
+    background-color: #f5f5f5;
+    justify-content: center;
+    height: 500px;
+    gap: 2em;
+    transition: all 0.4s ease-in;
+  }
+  .open {
+  font-size: 30px;
+  display: block;
+  color: rgba(2, 2, 2, 0.3);
+}
+  .cancel {
+    display: block;
+    font-size: 30px;
+    color: rgba(2, 2, 2, 0.3);
+    position: absolute;
+    top: 5%;
+    right: 5%;
+  }
+  .line {
+    margin: 2em auto 0;
+  }
+
+  .mobilecart {
+    display: flex;
+  }
+  .navList {
+    flex-direction: column;
+  }
+  .cart {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .header{
+    padding: 2em .3em;
+  }
+  .headCap{
+    max-width: 98%;
+    margin: auto;
+
+  }
+  .content {
+    width: 100%;
+  }
+  .btn {
+    position: absolute;
+    right: 5%;
+  }
 }

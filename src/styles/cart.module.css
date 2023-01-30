@@ -1,0 +1,645 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:display=swap");
+
+.cart {
+  background-color: #f5f5f5;
+  padding: 2em 1em;
+  margin: 0;
+}
+
+.top {
+  max-width: 90%;
+  width: 100%;
+  margin: 2em auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.text h3 {
+  margin-bottom: 0.4em;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #020202;
+}
+.text p {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  color: rgba(2, 2, 2, 0.3);
+  width: 500px;
+}
+.line {
+  border-top: 0.5px dashed rgba(2, 2, 2, 0.5);
+  width: 100%;
+}
+
+.bottom {
+  max-width: 90%;
+  width: 100%;
+  margin: 3em auto 0;
+}
+.bottom .text {
+  margin-bottom: 2em;
+}
+
+.order {
+  width: 100%;
+  height: 100%;
+  left: 126px;
+  top: 424px;
+  background: #ffffff;
+  box-shadow: 2px 2px 2px rgba(2, 2, 2, 0.1),
+    inset 2px 2px 2px rgba(2, 2, 2, 0.1);
+  border-radius: 20px 20px 0px 0px;
+  padding: 2em 0;
+}
+.orderTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 0.5px dashed rgba(2, 2, 2, 0.5);
+  padding: 0 2em 2em;
+}
+.orderTop h3 {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #020202;
+}
+
+.orderTop button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  color: #7d5930;
+}
+.tableDiv {
+  width: 100%;
+  overflow-x: scroll;
+}
+.tableDiv::-webkit-scrollbar {
+  width: 0;
+  border-radius: 0;
+}
+
+/* Track */
+.tableDiv::-webkit-scrollbar-track {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Handle */
+.tableDiv::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 0;
+}
+
+/* Handle on hover */
+.tableDiv::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+.table {
+  width: 100%;
+  padding: 1em;
+}
+.table thead tr .nth {
+  width: 30px;
+}
+.table thead tr th {
+  min-width: 100px;
+  text-align: left;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: rgba(2, 2, 2, 0.3);
+}
+.table input {
+  border: 0.5px dashed #7d5930;
+  border-radius: 2px;
+  width: 22px;
+  height: 22px;
+}
+
+.table tbody tr {
+  height: 180px;
+  background: #ffffff;
+  box-shadow: 1px 1px 2px rgba(2, 2, 2, 0.05),
+    inset 1px 1px 2px rgba(2, 2, 2, 0.05);
+}
+
+.table tbody tr td {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+
+  color: rgba(2, 2, 2, 0.8);
+}
+
+.table tbody img {
+  width: 80px;
+  height: 80px;
+}
+.pricing {
+  margin-top: 2em;
+  padding: 0 1em;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.7em;
+}
+
+.total p {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+
+  color: rgba(2, 2, 2, 0.3);
+}
+
+.total span {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: rgba(2, 2, 2, 0.8);
+}
+.totalPrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.7em;
+}
+.totalPrice {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: rgba(2, 2, 2, 0.3);
+  margin-bottom: 2em;
+}
+.totalPrice span {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: rgba(2, 2, 2, 0.8);
+}
+
+.conBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+
+.back {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  color: #7d5930;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+.conBtn button {
+  width: 578px;
+  height: 55px;
+  border: none;
+  outline: none;
+  background: rgba(125, 89, 48, 0.8);
+  box-shadow: 0px 1px 1px rgba(251, 133, 0, 0.05);
+  border-radius: 7px;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+.deli {
+  color: #0e9b2d;
+}
+.table tbody button {
+  width: 130px;
+  height: 55px;
+  background: rgba(125, 89, 48, 0.8);
+  box-shadow: 0px 1px 1px rgba(251, 133, 0, 0.05);
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+}
+@media (max-width: 1440px) {
+  .cart {
+    padding: 2em 0;
+  }
+  .top,
+  .bottom {
+    max-width: 98%;
+  }
+}
+
+@media (max-width: 900px) {
+  .conBtn button {
+    width: 60%;
+  }
+
+  .table {
+    min-width: 1200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .conBtn {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2em;
+  }
+  .conBtn p {
+    align-self: flex-start;
+  }
+}
+
+.payment {
+  width: 512px;
+  height: 875px;
+  background: #ffffff;
+  box-shadow: 1px 1px 1px rgba(2, 2, 2, 0.1),
+    inset 1px 1px 1px rgba(2, 2, 2, 0.1);
+  border-radius: 15px;
+  padding: 2em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 111;
+}
+
+.outline {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  left: 0;
+}
+
+.payment h2 {
+  margin-top: 3em;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #020202;
+}
+.payment p {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  color: rgba(2, 2, 2, 0.3);
+  width: 80%;
+  margin-bottom: 1em;
+}
+.cards {
+  margin-bottom: 1em;
+}
+.cards h4 {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  color: rgba(2, 2, 2, 0.3);
+  margin-bottom: 1em;
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+.cardCon {
+  height: 55px;
+  border: 1px dashed #7d5930;
+  border-radius: 7px;
+  padding: 0 1em;
+}
+.cardCon img {
+  width: 89.08px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: flex-start;
+  margin-bottom: 1em;
+}
+.input label {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  color: rgba(2, 2, 2, 0.3);
+}
+
+.input input {
+  width: 90%;
+  height: 55px;
+  border: 0.5px dashed #7d5930;
+  border-radius: 7px;
+}
+
+.inputCSV {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.inputCSV label {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  color: rgba(2, 2, 2, 0.3);
+  margin-bottom: 1em;
+}
+.inputCSV > div {
+  width: 45%;
+}
+
+.inputCSV input {
+  width: 100%;
+  height: 55px;
+  border: 0.5px dashed #7d5930;
+  border-radius: 7px;
+}
+.payment .pricing {
+  padding: 0;
+  width: 90%;
+}
+
+.payment button {
+  width: 100%;
+  height: 55px;
+  background: rgba(125, 89, 48, 0.8);
+  box-shadow: 0px 1px 1px rgba(251, 133, 0, 0.05);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+  border: none;
+  outline: none;
+}
+
+.payment button h5 {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.payment button span {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+@media (max-width: 600%) {
+  .payment {
+    width: 98%;
+  }
+  .success {
+    width: 98%;
+  }
+}
+
+.success {
+  width: 580px;
+  height: 495px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  box-shadow: 1px 1px 1px rgba(2, 2, 2, 0.1),
+    inset 1px 1px 1px rgba(2, 2, 2, 0.1);
+  border-radius: 15px;
+  padding: 2em;
+}
+.round {
+  position: absolute;
+  width: 346.64px;
+  height: 191.18px;
+  left: -25%;
+  top: -25%;
+  background: rgba(125, 89, 48, 0.15);
+  transform: rotate(28.17deg);
+  border-radius: 100%;
+}
+
+.successCap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(125, 89, 48, 0.8);
+  margin-bottom: 3em;
+  border-radius: 100%;
+}
+.iconn {
+  font-size: 30px;
+  color: #fff;
+}
+
+.successCap h2 {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #020202;
+}
+
+.successCap p {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  margin-bottom: 1em;
+  color: rgba(2, 2, 2, 0.3);
+}
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.btn1 {
+width: 247px;
+  height: 55px;
+  background: rgba(125, 89, 48, 0.8);
+  box-shadow: 0px 1px 1px rgba(251, 133, 0, 0.05);
+  border-radius: 7px;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
+border: none;
+outline: none;
+  color: #ffffff;
+}
+
+.btn2 {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
+  color: #7d5930;
+  width: 247px;
+  height: 55px;
+  border: 1px dashed #7d5930;
+  border-radius: 7px;
+  background-color: transparent;
+}

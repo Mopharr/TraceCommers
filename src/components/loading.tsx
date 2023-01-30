@@ -9,7 +9,7 @@ const Loading = () => {
 
   useEffect(() => {
     gsap.to(imageName.current, { duration: 1.5, y: "0%", delay: 0.5 });
-    gsap.to(hide.current, { duration: 1.5, y: "-100%", delay: 2 });
+    gsap.to(hide.current, { duration: 1.5, y: "-110%", delay: 2 });
   }, []);
 
   return (

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/shop.module.css";
 import { FaTimes} from 'react-icons/fa'
+import Link from "next/link";
 
 const productDetails = ({ productDatails, setShowDetails }: any) => {
   const handleClose = () => {
@@ -8,7 +9,7 @@ const productDetails = ({ productDatails, setShowDetails }: any) => {
   };
   return (
     <div className={styles.details}>
-      <FaTimes className = {styles.cancel}onClick={handleClose} />
+      <FaTimes className={styles.cancel} onClick={handleClose} />
       <h2>Seats</h2>
 
       <div className={styles.detailsCap}>
@@ -37,7 +38,10 @@ const productDetails = ({ productDatails, setShowDetails }: any) => {
           </div>
           <p>{productDatails?.subCon}</p>
           <div className={styles.price}>
-            <span>{productDatails?.price}</span> <button>Add to Cart</button>
+            <span>{productDatails?.price}</span>
+            <Link href="/cart">
+              <button>Add to Cart</button>
+            </Link>
           </div>
         </div>
       </div>

@@ -11,6 +11,9 @@ import { GrFormCheckmark } from "react-icons/gr";
 import { BiErrorCircle } from "react-icons/bi";
 import { CircularProgress } from "@mui/material";
 import { useRouter } from "next/router";
+import { toast, ToastContainer } from "react-toastify";
+  import "react-toastify/dist/ReactToastify.css";
+
 
 interface FormInput {
   username: string;
@@ -24,8 +27,7 @@ const schema = yup.object({
 const Signup = () => {
   const [loading, setLoading] = useState(false);
   const timer: any = useRef();
-  const [success, setSuccess] = useState(false);
-  const [err, setErr] = useState(false);
+ 
   const {
     register,
     handleSubmit,
@@ -48,46 +50,21 @@ const Signup = () => {
       )
       .then((res: any) => {
         console.log(res);
-        setErr(false);
         //  document.cookie = `ID=${res.data._id}; expires=Thu, 22 Dec 2022 12:00:00 UTC;`;
-        setSuccess(true);
-        timer.current = window.setTimeout(() => {
-          setSuccess(false);
-        }, 4000);
+        toast.success(`${res?.data?.message}`);
         router.push("/shop");
       })
       .catch((error) => {
-        console.log(error);
-        setSuccess(false);
-        setErr(true);
-        timer.current = window.setTimeout(() => {
-          setErr(false);
-        }, 4444000);
+        console.log(error?.response?.data?.errors);
+        toast.error(`${error?.response?.data?.errors}`);
       });
   };
 
   return (
     <div className={styles.sign}>
+      <ToastContainer />
       <Nav />
 
-      {success ? (
-        <div>
-          <p className={styles.message}>
-            {" "}
-            <GrFormCheckmark className={styles.messageIcon} /> login was
-            successful
-          </p>
-        </div>
-      ) : null}
-
-      {err ? (
-        <div className={success ? "none" : "show"}>
-          <p className={styles.error}>
-            <BiErrorCircle className={styles.messageIcon} />
-            login failed
-          </p>
-        </div>
-      ) : null}
       <div className={styles.signCap}>
         <img src="/pi.png" alt="" />
 
