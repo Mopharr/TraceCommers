@@ -49,6 +49,7 @@
   color: rgba(2, 2, 2, 0.3);
   transition: all 0.3s ease-in-out;
   list-style: none;
+  cursor: pointer;
 }
 .navList li:hover {
   color: #7d5930;
@@ -66,6 +67,33 @@
   background: #7d5930;
   transition: all 0.3s ease-in-out;
 }
+
+.navList .modalList {
+  position: relative;
+}
+.lii {
+  position: relative;
+}
+.navv {
+  position: absolute;
+  width: 150px;
+  height: 128px;
+  padding: 1em 2em;
+  top: 150%;
+  left: 10%;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 1px rgba(2, 2, 2, 0.1),
+    inset 1px 1px 1px rgba(2, 2, 2, 0.1);
+  border-radius: 15px;
+}
+.navv li {
+  margin-bottom: 1em;
+}
+
+.navv li:hover > ::after {
+  display: none;
+}
+
 .cancel {
   display: none;
 }
@@ -283,7 +311,6 @@
   object-fit: contain;
 }
 
-
 @media (max-width: 1440px) {
   .main {
     padding: 2em 0;
@@ -323,10 +350,10 @@
     transition: all 0.4s ease-in;
   }
   .open {
-  font-size: 30px;
-  display: block;
-  color: rgba(2, 2, 2, 0.3);
-}
+    font-size: 30px;
+    display: block;
+    color: rgba(2, 2, 2, 0.3);
+  }
   .cancel {
     display: block;
     font-size: 30px;
@@ -351,13 +378,12 @@
 }
 
 @media (max-width: 500px) {
-  .header{
-    padding: 2em .3em;
+  .header {
+    padding: 2em 0.3em;
   }
-  .headCap{
+  .headCap {
     max-width: 98%;
     margin: auto;
-
   }
   .content {
     width: 100%;

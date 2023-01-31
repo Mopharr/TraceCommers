@@ -15,8 +15,6 @@ import { useRouter } from "next/router";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
-
 interface FormInput {
   username: string;
   email: string;
@@ -28,7 +26,7 @@ const schema = yup.object({
   password: yup.string().required().max(16).min(8),
 });
 
-const Signup = () => {
+const Signup = ({ setName, currentModal }: any) => {
   const [loading, setLoading] = useState(false);
   const [verify, setVerify] = useState(false);
   const timer: any = useRef();
@@ -70,8 +68,8 @@ const Signup = () => {
   return (
     <div className={styles.sign}>
       {verify ? <Verifymodal /> : null}
-    <ToastContainer />
-      <Nav />
+      <ToastContainer />
+      <Nav setName={setName} currentModal={currentModal} />
 
       <div className={styles.signCap}>
         <img src="/pi.png" alt="" />
@@ -95,9 +93,14 @@ const Signup = () => {
               placeholder="Password"
             />
             <input type="password" placeholder="Confirm Password" />
-
+            <div className="check">
+              <input type="checkbox" name="" id="" />
+              <p>
+                Receive newsletters & promotional email from us, to stay
+                informed
+              </p>
+            </div>
             <button type="submit">
-              {" "}
               {loading ? (
                 <CircularProgress size={30} sx={{ color: "white" }} />
               ) : (

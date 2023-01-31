@@ -5,10 +5,10 @@ import Link from "next/link";
 import order from "../utilities/order.json";
 
 
-const Manage = () => {
+const Manage = ({setName, currentModal}:any) => {
   return (
     <div className={styles.center}>
-      <Nav />
+      <Nav setName={setName} currentModal={currentModal} />
 
       <div className={styles.top}>
         <div className={styles.text}>
@@ -33,7 +33,6 @@ const Manage = () => {
           </div>
           <div className={styles.btns}>
             <button className={styles.btn2}>
-            
               <Link href="/update">Update Stock</Link>
             </button>
             <button className={styles.btn1}>View Product</button>

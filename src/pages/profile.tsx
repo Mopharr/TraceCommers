@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import styles from "../styles/profile.module.css";
 import { PassContent, PassTitle } from "../components/passProfile";
 
-const Profile = () => {
+const Profile = ({setName, currentModal} :any) => {
   const [tog, setTog] = useState("1");
 
   const handleTog = (e: any) => {
@@ -14,7 +14,7 @@ const Profile = () => {
   
   return (
     <div className={styles.profile}>
-      <Nav />
+      <Nav setName={setName} currentModal={currentModal} />
 
       <div className={styles.profileCap}>
         <div className={styles.top}>

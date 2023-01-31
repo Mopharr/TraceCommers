@@ -8,7 +8,7 @@ import { useState } from "react";
 import Link from "next/link";
 import OrderSuccess from "@/components/orderSuccess";
 
-const Cart = () => {
+const Cart = ({setName, currentModal} : any) => {
   const [showDetails, setShowDetails] = useState(false);
   const [completeOrder, setCompleteOrder] = useState(false);
 
@@ -18,7 +18,7 @@ const Cart = () => {
   };
   return (
     <div className={styles.cart}>
-      <Nav />
+      <Nav setName={setName} currentModal={currentModal} />
 
       <div className={styles.top}>
         <div className={styles.text}>

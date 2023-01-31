@@ -6,10 +6,10 @@ import order from "../utilities/order.json";
 import { BsPencil } from "react-icons/bs";
 import { ImBin } from "react-icons/im";
 
-const Update = () => {
+const Update = ({ setName, currentModal }: any) => {
   return (
     <div className={styles.center}>
-      <Nav />
+      <Nav setName={setName} currentModal={currentModal} />
 
       <div className={styles.top}>
         <div className={styles.text}>

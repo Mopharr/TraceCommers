@@ -24,7 +24,7 @@ const schema = yup.object({
   password: yup.string().required().max(16).min(8),
 });
 
-const Signup = () => {
+const Signup = ({setName, currentModal}:any) => {
   const [loading, setLoading] = useState(false);
   const timer: any = useRef();
  
@@ -63,7 +63,7 @@ const Signup = () => {
   return (
     <div className={styles.sign}>
       <ToastContainer />
-      <Nav />
+      <Nav setName={setName} currentModal={currentModal} />
 
       <div className={styles.signCap}>
         <img src="/pi.png" alt="" />

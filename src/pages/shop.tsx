@@ -6,7 +6,7 @@ import { FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
 import products from "../utilities/products.json";
 import ProductDetails from "@/components/productDetails";
 
-const Shop = () => {
+const Shop = ({setName, currentModal, handleActive, navActive}:any) => {
   const [productDatails, setProductDetails] = useState();
   const [showDetails, setShowDetails] = useState(false);
 
@@ -17,7 +17,12 @@ const Shop = () => {
 
   return (
     <div className={styles.shop}>
-      <Nav />
+      <Nav
+        setName={setName}
+        currentModal={currentModal}
+        handleActive={handleActive}
+        navActive={navActive}
+      />
 
       <div className={styles.top}>
         <div className={styles.text}>

@@ -9,7 +9,10 @@ import Loading from "@/components/loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home( {currentModal, setName, handleActive, navActive}: any) {
+
+
+
   return (
     <>
       <Head>
@@ -20,7 +23,12 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Loading />
-        <Nav />
+        <Nav
+          setName={setName}
+          currentModal={currentModal}
+          handleActive={handleActive}
+          navActive={navActive}
+        />
         <section className={styles.header}>
           <div className={styles.headCap}>
             <div className={styles.content}>

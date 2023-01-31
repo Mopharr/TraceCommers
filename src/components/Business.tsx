@@ -4,25 +4,11 @@ import styles from "../styles/center.module.css";
 import PhoneInput from "react-phone-number-input";
 import Link from "next/link";
 
-const Business = () => {
+const BusinessRegister = ({nextStep}: any) => {
   const [time, setTime] = useState();
 
   return (
     <div className={styles.center}>
-      <Nav />
-
-      <div className={styles.top}>
-        <div className={styles.text}>
-          <h3>Seller Center</h3>
-          <p>Fill the below spaces to register as a seller</p>
-        </div>
-        <select>
-          <option value="">Register</option>
-          <option value="">Login</option>
-        </select>
-      </div>
-      <div className={styles.line}></div>
-
       <div className={styles.bottom}>
         <h3>Business Information</h3>
         <p>
@@ -79,8 +65,7 @@ const Business = () => {
               placeholder="Business Owner or Legal Representative’s Fullname"
             />
 
-            <button type="submit">
-              <Link href="/manage">Continue</Link>
+            <button type="submit" onClick={nextStep}>Continue
             </button>
           </div>
         </form>
@@ -89,4 +74,4 @@ const Business = () => {
   );
 };
 
-export default Business;
+export default BusinessRegister;
