@@ -17,7 +17,7 @@ const NavModal = ({ setName, navActive }: any) => {
     {
       id: "3",
       name: "Buyer",
-      link: "/buyer",
+      link: "/shop",
     },
   ];
 

@@ -408,6 +408,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .colImg {
@@ -596,16 +597,19 @@
   letter-spacing: 0.05em;
   color: #7d5930;
 }
-.confort img {
+.confort .imaa {
   width: 500px;
   height: 500px;
   object-fit: contain;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  position: relative;
+  bottom: 22%;
   animation: upDown 1s infinite;
 }
 
+.imaa img {
+  height: 100%;
+  width: 100%;
+}
 @keyframes upDown {
   0% {
     transform: translateY(0px);
@@ -640,6 +644,7 @@
   max-width: 879px;
   width: 100%;
   margin: 3em auto;
+  flex-wrap: wrap;
 }
 .payImage img {
   width: 166px;
@@ -711,6 +716,8 @@
   width: 100%;
   margin: 4em auto;
   padding-bottom: 2em;
+  flex-wrap: wrap;
+  gap: 3em;
 }
 
 .first {
@@ -805,8 +812,14 @@
   }
   .nav,
   .line,
-  .header {
-    max-width: 100%;
+  .header,
+  .service,
+  .confort,
+  .foot,
+  .collec,
+  .lastCol,
+  .ceo {
+    max-width: 98%;
   }
 }
 
@@ -863,9 +876,73 @@
   .cart {
     display: none;
   }
+
+  .header {
+    flex-direction: column;
+  }
+  .header .text {
+    margin-right: auto;
+  }
+  .headImage {
+    margin-left: auto;
+  }
+  .collec {
+    justify-content: center;
+    gap: 2em;
+  }
+  .last {
+    width: 350px;
+  }
+  .confort {
+    height: 100%;
+    padding: 4em 3em;
+    flex-direction: column;
+  }
+  .ceo {
+    flex-direction: column;
+    padding: 6em 1.7em;
+  }
+  .ceo img {
+    margin-right: auto;
+  }
+  .ceoText {
+    margin-top: 3em;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .header .text {
+    width: 100%;
+  }
+  .header .text h2 {
+    font-size: 45px;
+    line-height: 55px;
+  }
+  .headImage {
+    width: 100%;
+  }
+  .big {
+    width: 300px;
+    height: 300px;
+  }
+  .small {
+    width: 220px;
+    height: 180px;
+  }
+  .about {
+    width: 95%;
+  }
+  .payImage {
+    justify-content: center;
+    gap: 2em;
+  }
 }
 
 @media (max-width: 500px) {
+  .confort {
+    padding: 4em 1em;
+  }
   .header {
     padding: 2em 0.3em;
   }
@@ -876,5 +953,57 @@
   .btn {
     position: absolute;
     right: 5%;
+  }
+
+  .colImg {
+    width: 95%;
+  }
+  .lastCol {
+    justify-content: center;
+  }
+  .about h2,
+  .feature h2,
+  .latest h2 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .conText {
+    width: 95%;
+  }
+  .ceoText {
+    width: 100%;
+  }
+
+
+  .ceo img {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 400px) {
+   .nav,
+  .line,
+  .header,
+  .service,
+  .confort,
+  .foot,
+  .collec,
+  .lastCol,
+  .ceo {
+    max-width: 100%;
+  }
+  .ceo {
+    padding: 6em .2em;
+  }
+    .conText h3,
+  .conText h3 span {
+    font-size: 30px;
+  }
+  .confort {
+    padding: 4em .2em;
+  }
+  .header {
+    margin: 0em auto 3em;
   }
 }

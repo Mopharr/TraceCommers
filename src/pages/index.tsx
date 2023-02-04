@@ -10,6 +10,9 @@ import { RiCustomerService2Line } from "react-icons/ri";
 import Link from "next/link";
 import Loading from "@/components/loading";
 import Footer from "@/components/footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +22,13 @@ export default function Home({
   handleActive,
   navActive,
 }: any) {
+  useEffect(() => {
+    AOS.init({
+      offset: 400,
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <>
       <Head>
@@ -42,7 +52,7 @@ export default function Home({
               The best platform to get the best equipment for the best homes.
               You would love to check us out.
             </p>
-            <button className={styles.but1}>Get Started</button>
+            <button className={styles.but1}>Get Started </button>
             <button className={styles.but2}>
               See Collections <MdArrowRightAlt />
             </button>
@@ -70,39 +80,39 @@ export default function Home({
 
         <section className={styles.about}>
           <h2>What We Do</h2>
-          <p>
+          <p data-aos="fade-up">
             Random Platform is literally the best place to get your home, office
             and other places furniture. Furniture includes objects such as
             tables, chairs, beds, desks, dressers, and cupboards. These objects
             are usually kept in a house or other building to make it suitable or
             comfortable for living or working in
           </p>
-          <button>Buy Now</button>
+          <button data-aos="fade-up">Buy Now</button>
         </section>
         <section className={styles.feature}>
           <h2>Featured Collections</h2>
           <div className={styles.collec}>
-            <div className={styles.colImg}>
+            <div className={styles.colImg} data-aos="fade-right">
               <img src="11.png" alt="" />
             </div>
-            <div className={styles.colImg}>
+            <div className={styles.colImg} data-aos="fade-left">
               <img src="10.png" alt="" />
             </div>
-            <div className={styles.colImg}>
+            <div className={styles.colImg} data-aos="fade-right">
               <img src="9.png" alt="" />
             </div>
-            <div className={styles.colImg}>
+            <div className={styles.colImg} data-aos="fade-left">
               <img src="8.png" alt="" />
             </div>
           </div>
-          <button>View All</button>
+          <button data-aos="fade-up">View All</button>
         </section>
 
         <section className={styles.latest}>
           <h2>Latest Products</h2>
 
           <div className={styles.lastCol}>
-            <div className={styles.last}>
+            <div className={styles.last} data-aos="zoom-in-up">
               <div className={styles.lsImg}>
                 <img src="7.png" alt="" />
               </div>
@@ -110,7 +120,7 @@ export default function Home({
                 <p>KOTAN HIGH WOOD</p> <span>$50</span>
               </div>
             </div>
-            <div className={styles.last}>
+            <div className={styles.last} data-aos="zoom-in-up">
               <div className={styles.lsImg}>
                 <img src="6.png" alt="" />
               </div>
@@ -118,7 +128,7 @@ export default function Home({
                 <p>NYLA TABLE</p> <span>$50</span>
               </div>
             </div>
-            <div className={styles.last}>
+            <div className={styles.last} data-aos="zoom-in-up">
               <div className={styles.lsImg}>
                 <img src="9.png" alt="" />
               </div>
@@ -126,7 +136,7 @@ export default function Home({
                 <p>ANNIBALE COLLOMBO</p> <span>$50</span>
               </div>
             </div>
-            <div className={styles.last}>
+            <div className={styles.last} data-aos="zoom-in-up">
               <div className={styles.lsImg}>
                 <img src="p1.png" alt="" />
               </div>
@@ -134,7 +144,7 @@ export default function Home({
                 <p>DUAL SET UNIT</p> <span>$50</span>
               </div>
             </div>
-            <div className={styles.last}>
+            <div className={styles.last} data-aos="zoom-in-up">
               <div className={styles.lsImg}>
                 <img src="6.png" alt="" />
               </div>
@@ -142,7 +152,7 @@ export default function Home({
                 <p>CANE-LINE CHAIR</p> <span>$50</span>
               </div>
             </div>
-            <div className={styles.last}>
+            <div className={styles.last} data-aos="zoom-in-up">
               <div className={styles.lsImg}>
                 <img src="9.png" alt="" />
               </div>
@@ -165,20 +175,22 @@ export default function Home({
             </p>
             <button>View Now</button>
           </div>
-          <img src="4.png" alt="" />
+          <div className={styles.imaa}>
+            <img src="4.png" alt="" data-aos="fade-left" />
+          </div>
         </section>
         <section className={styles.pay}>
           <h2>Convenient Payment Methods</h2>
           <div className={styles.payImage}>
-            <img src="02.png" alt="" />
-            <img src="03.png" alt="" />
-            <img src="01.png" alt="" />
+            <img src="02.png" alt="" data-aos="zoom-in-up" />
+            <img src="03.png" alt="" data-aos="zoom-in-up" />
+            <img src="01.png" alt="" data-aos="zoom-in-up" />
           </div>
         </section>
         <section className={styles.ceo}>
           <img src="14.png" alt="" />
 
-          <div className={styles.ceoText}>
+          <div className={styles.ceoText} data-aos="fade-left">
             <h3>CEO, IPC.</h3>
             <p>
               Random has been the best so far for me and my family at home, and
