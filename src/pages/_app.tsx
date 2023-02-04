@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [currentModal, setCurrentModal] = useState("Shop");
+  const [currentSellModal, setCurrentSellModal] = useState("Register");
   const [navActive, setNavActive] = useState("1")
 
   const handleActive = (e:any) => {
@@ -13,9 +14,20 @@ export default function App({ Component, pageProps }: AppProps) {
   const setName = (name: string) => {
     setCurrentModal(name);
   };
+    const setModalName = (namee: string) => {
+      setCurrentSellModal(namee);
+    };
 
 
   return (
-    <Component handleActive = {handleActive} navActive={navActive} setName={setName} currentModal={currentModal} {...pageProps} />
+    <Component
+      handleActive={handleActive}
+      setModalName={setModalName}
+      navActive={navActive}
+      setName={setName}
+      currentSellModal={currentSellModal}
+      currentModal={currentModal}
+      {...pageProps}
+    />
   );
 }

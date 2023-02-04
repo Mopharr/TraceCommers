@@ -72,7 +72,7 @@ const Shop = ({setName, currentModal, handleActive, navActive}:any) => {
                     onClick={() => handleClick(item)}
                     className={styles.data}
                   >
-                    <img src={item.image} alt="" />
+                    <img src={item.image} alt="chair" />
                     <p>{item.name}</p>
                     <span>{item.price}</span>
                   </div>

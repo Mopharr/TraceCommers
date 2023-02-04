@@ -3,9 +3,19 @@ import React, { useState } from "react";
 import styles from "../styles/center.module.css";
 import Link from "next/link";
 import order from "../utilities/order.json";
+import SellModal from "@/components/sellModal";
 
+const Manage = ({
+  setModalName,
+  setName,
+  currentModal,
+  currentSellModal,
+}: any) => {
+  const [modal, setModal] = useState(false);
 
-const Manage = ({setName, currentModal}:any) => {
+  const handleModal = () => {
+    setModal((prev) => !prev);
+  };
   return (
     <div className={styles.center}>
       <Nav setName={setName} currentModal={currentModal} />
@@ -15,10 +25,12 @@ const Manage = ({setName, currentModal}:any) => {
           <h3>Seller Center</h3>
           <p>Fill the below spaces to register as a seller</p>
         </div>
-        <select>
-          <option value="">Register</option>
-          <option value="">Login</option>
-        </select>
+        <div className={styles.modalList}>
+          <p onClick={handleModal}>
+            <Link href="">{currentSellModal}</Link>
+          </p>
+          {modal ? <SellModal setModalName={setModalName} /> : null}
+        </div>
       </div>
       <div className={styles.line}></div>
 
@@ -40,7 +52,7 @@ const Manage = ({setName, currentModal}:any) => {
         </div>
 
         {/* <div className={styles.chart}>
-            <img src="/Sa.png" alt="" />
+            <img src="/Sa.png" alt="chair" />
         </div> */}
 
         <div className={styles.order}>

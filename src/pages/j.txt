@@ -1,0 +1,25 @@
+ <section className={styles.header}>
+          <div className={styles.headCap}>
+            <div className={styles.content}>
+              <h2>Your Best Home Interiors </h2>
+              <p>
+                The best platform to get the best equipment for the best homes.
+                You would love to check us out.
+              </p>
+
+              <div className={styles.play}>
+                <BsFillPlayFill className={styles.playIcon} />
+                <img src="/pi7.png" alt="chair" />
+              </div>
+            </div>
+
+            <div className={styles.btn}>
+              <Link href="/signup">
+                <button className={styles.create}>Create Accout</button>
+              </Link>
+              <Link href="/signin">
+                <button className={styles.login}>Login</button>
+              </Link>
+            </div>
+          </div>
+        </section>

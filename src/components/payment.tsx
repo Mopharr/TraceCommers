@@ -26,13 +26,13 @@ const payment = ({ setShowDetails, setCompleteOrder }: any) => {
           <h4>Card Type</h4>
           <div className={styles.card}>
             <div className={styles.cardCon}>
-              <img src="/1.png" alt="" />
+              <img src="/1.png" alt="chair" />
             </div>
             <div className={styles.cardCon}>
-              <img src="/2.png" alt="" />
+              <img src="/2.png" alt="chair" />
             </div>
             <div className={styles.cardCon}>
-              <img src="/3.png" alt="" />
+              <img src="/3.png" alt="chair" />
             </div>
           </div>
         </div>

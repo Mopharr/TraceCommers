@@ -27,7 +27,7 @@ const Profile = ({setName, currentModal} :any) => {
           <Sidebar />
 
           <div className={styles.bottomCap}>
-            <img src="/pi.png" alt="" />
+            <img src="/pi.png" alt="chair" />
             <div className={styles.bottomInput}>
               <h4>Reset Password</h4>
               <p>

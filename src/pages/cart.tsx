@@ -69,7 +69,7 @@ const Cart = ({setName, currentModal} : any) => {
                         <input type="checkbox" name="" id="" />
                       </td>
                       <td>
-                        <img src={items.image} alt="" /> <br />
+                        <img src={items.image} alt="chair" /> <br />
                         <p>{items.name}</p>
                       </td>
                       <td>{items.color}</td>
@@ -137,7 +137,7 @@ const Cart = ({setName, currentModal} : any) => {
                   return (
                     <tr key={items?.id}>
                       <td>
-                        <img src={items.image} alt="" /> <br />
+                        <img src={items.image} alt="chair" /> <br />
                         <p>{items.name}</p>
                       </td>
                       <td>{items.color}</td>

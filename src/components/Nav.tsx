@@ -23,7 +23,7 @@ const Nav = ({ setName, currentModal, navActive, handleActive }: any) => {
     <>
       <div className={styles.nav}>
         <Link href="/">
-          <img src="/logo.png" alt="" />
+          <img src="/logo.png" alt="chair" />
         </Link>
 
         <div className={`${tog ? styles.activeNav : styles.mid}`}>

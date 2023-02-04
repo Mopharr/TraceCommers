@@ -15,11 +15,11 @@ const productDetails = ({ productDatails, setShowDetails }: any) => {
 
         <div className={styles.detailsCap}>
           <div className={styles.image}>
-            <img src={productDatails?.image} alt="" />
+            <img src={productDatails?.image} alt="chair" />
             <div className={styles.carousel}>
-              <img src={productDatails?.image} alt="" />
-              <img src={productDatails?.image} alt="" />
-              <img src={productDatails?.image} alt="" />
+              <img src={productDatails?.image} alt="chair" />
+              <img src={productDatails?.image} alt="chair" />
+              <img src={productDatails?.image} alt="chair" />
             </div>
           </div>
           <div className={styles.detailsText}>

@@ -45,7 +45,48 @@
   letter-spacing: 0.05em;
   color: rgba(2, 2, 2, 0.3);
 }
-.top select {
+.modalList {
+  position: relative;
+}
+.navv {
+  position: absolute;
+  width: 150px;
+  height: 128px;
+  padding: 1em;
+  top: 120%;
+  right: 70%;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 1px rgb(2 2 2 / 10%), inset 1px 1px 1px rgb(2 2 2 / 10%);
+  border-radius: 15px;
+}
+.navv h3 {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: rgba(2, 2, 2, 0.3);
+  margin-bottom: 1em;
+}
+
+.navv li {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 600;
+  font-size:16px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: rgba(2, 2, 2, 0.8);
+  list-style: none;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.modalList p {
   border: none;
   outline: none;
   font-family: "Quicksand";
@@ -411,18 +452,16 @@
     flex-direction: column;
     gap: 2em;
   }
-
 }
 
 @media (max-width: 500px) {
-    .btns {
-      flex-direction: column;
-      width: 100%;
-    }
-    .center
-    .btns button{
-      width: 100%;
-    }
+  .btns {
+    flex-direction: column;
+    width: 100%;
+  }
+  .center .btns button {
+    width: 100%;
+  }
 }
 .outline {
   background-color: rgba(0, 0, 0, 0.6);

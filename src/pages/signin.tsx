@@ -66,7 +66,7 @@ const Signup = ({setName, currentModal}:any) => {
       <Nav setName={setName} currentModal={currentModal} />
 
       <div className={styles.signCap}>
-        <img src="/pi.png" alt="" />
+        <img src="/pi.png" alt="chair" />
 
         <div className={styles.signInput}>
           <h3>Log In</h3>
@@ -94,8 +94,8 @@ const Signup = ({setName, currentModal}:any) => {
           <p>Or Continue with:</p>
 
           <div className={styles.img}>
-            <img src="/pi8.png" alt="" />
-            <img src="/pi9.png" alt="" />
+            <img src="/pi8.png" alt="chair" />
+            <img src="/pi9.png" alt="chair" />
           </div>
         </div>
       </div>

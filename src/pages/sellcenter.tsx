@@ -6,17 +6,26 @@ import Link from "next/link";
 import RegisterBusiness from "@/components/Register";
 import BusinessRegister from "@/components/Business";
 import Additional from "@/components/Additional";
+import SellModal from "@/components/sellModal";
 
-const Sellcenter = ({ currentModal, setName }: any) => {
-  const [time, setTime] = useState();
+const Sellcenter = ({
+  currentModal,
+  setName,
+  setModalName,
+  currentSellModal,
+}: any) => {
   const [step, setStep] = useState(1);
+  const [modal, setModal] = useState(false);
 
-   const nextStep = () => {
-     setStep(step + 1);
-   };
+  const handleModal = () => {
+    setModal((prev) => !prev);
+  };
+
+  const nextStep = () => {
+    setStep(step + 1);
+  };
 
   const render = () => {
-
     switch (step) {
       case 1:
         return <RegisterBusiness nextStep={nextStep} />;
@@ -31,7 +40,6 @@ const Sellcenter = ({ currentModal, setName }: any) => {
         return <RegisterBusiness />;
     }
   };
- 
 
   return (
     <div className={styles.center}>
@@ -42,10 +50,12 @@ const Sellcenter = ({ currentModal, setName }: any) => {
           <h3>Seller Center</h3>
           <p>Fill the below spaces to register as a seller</p>
         </div>
-        <select>
-          <option value="">Register</option>
-          <option value="">Login</option>
-        </select>
+        <div className={styles.modalList}>
+          <p onClick={handleModal}>
+            <Link href="">{currentSellModal}</Link>
+          </p>
+          {modal ? <SellModal setModalName={setModalName} /> : null}
+        </div>
       </div>
       <div className={styles.line}></div>
 
@@ -56,66 +66,3 @@ const Sellcenter = ({ currentModal, setName }: any) => {
 };
 
 export default Sellcenter;
-
-{
-  /* <div className={styles.bottom}>
-        <h3>Seller Account Infomation</h3>
-        <p>
-          Fill in all the below spaces, so as to get your seller account
-          available to customers.
-        </p>
-
-        <form className={styles.form}>
-          <div>
-            <input
-              className={styles.input}
-              type="text"
-              placeholder="Selles's Id"
-            />
-            <input
-              className={styles.input}
-              type="text"
-              placeholder="Shop Name"
-            />
-            <input className={styles.input} type="email" placeholder="Email" />
-            <input
-              className={styles.input}
-              type="password"
-              placeholder="Password"
-            />
-            <input
-              className={styles.input}
-              type="password"
-              placeholder="Confirm Password"
-            />
-          </div>
-
-          <div>
-            <input
-              className={styles.input}
-              type="text"
-              placeholder="Contact Address"
-            />
-            <input
-              className={styles.input}
-              type="text"
-              placeholder="Postal/Zip Code"
-            />
-            <select className={styles.select} name="" id="">
-              Select Business Type
-              <option value="">Individual</option>
-              <option value="">Company</option>
-            </select>
-            <input
-              className={styles.input}
-              type="text"
-              placeholder="Account Manager Name"
-            />
-           
-            <button type="submit">
-              <Link href="/business">Continue</Link>
-            </button>
-          </div>
-        </form>
-      </div> */
-}
