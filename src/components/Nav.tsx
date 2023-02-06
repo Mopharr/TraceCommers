@@ -22,18 +22,15 @@ const Nav = ({ setName, currentModal, navActive, handleActive }: any) => {
   return (
     <>
       <div className={styles.nav}>
-        <Link href="/">
-          <img src="/logo.png" alt="chair" />
-        </Link>
-
-        <div className={`${tog ? styles.activeNav : styles.mid}`}>
-          <FaTimes onClick={handleTog} className={styles.cancel} />
+          <Link href="/">
+            <img src="/logo.png" alt="chair" />
+          </Link>
+        <div className={styles.mid}>
           <ul className={styles.navList}>
             <li
               id="1"
               onClick={handleActive}
               className={`${navActive === "1" ? styles.active : null}`}
-              // className={styles.active}
             >
               <Link href="/">Home</Link>
             </li>
@@ -57,19 +54,6 @@ const Nav = ({ setName, currentModal, navActive, handleActive }: any) => {
               <Link href="/contact">Contact</Link>
             </li>
           </ul>
-
-          <select name="" id="">
-            <option value="english">Eng</option>
-            <option value="yoruba">Yoruba</option>
-            <option value="hausa">Hausa</option>
-          </select>
-          <div className={styles.mobilecart}>
-            <AiOutlineSearch className={styles.mobilecartIcon} />
-            <AiOutlineShoppingCart className={styles.mobilecartIcon} />
-            <Link href="/profile">
-              <CgProfile className={styles.mobilecartIcon} />
-            </Link>
-          </div>
         </div>
         <div className={styles.cart}>
           <AiOutlineSearch className={styles.cartIcon} />
@@ -84,7 +68,7 @@ const Nav = ({ setName, currentModal, navActive, handleActive }: any) => {
         <RxHamburgerMenu className={styles.open} onClick={handleTog} />
       </div>
 
-      <div className={styles.line}></div>
+      {/* <div className={styles.line}></div> */}
     </>
   );
 };

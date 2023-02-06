@@ -58,12 +58,13 @@ export default function Home({
             </button>
           </div>
           <div className={styles.headImage}>
-            <div className={styles.small}>
-              <img src="12.png" alt="chair" />
-            </div>
-            <div className={styles.big}>
+            {/* <div className={styles.small}>
+              <img src="sh.jpg" alt="chair" />
+            </div> */}
+            {/*  <div className={styles.big}>
               <img src="13.png" alt="chair" />
-            </div>
+            </div> */}
+            <img src="/ss.jpg" alt="" />
           </div>
         </header>
         <section className={styles.service}>
@@ -94,15 +95,31 @@ export default function Home({
           <div className={styles.collec}>
             <div className={styles.colImg} data-aos="fade-right">
               <img src="11.png" alt="" />
+
+              <div className={styles.collText}>
+                <p>Soft Chair</p> <MdArrowRightAlt />
+              </div>
             </div>
             <div className={styles.colImg} data-aos="fade-left">
               <img src="10.png" alt="" />
+
+              <div className={styles.collText}>
+                <p>Soft Chair</p> <MdArrowRightAlt />
+              </div>
             </div>
             <div className={styles.colImg} data-aos="fade-right">
               <img src="9.png" alt="" />
+
+              <div className={styles.collText}>
+                <p>Soft Chair</p> <MdArrowRightAlt />
+              </div>
             </div>
             <div className={styles.colImg} data-aos="fade-left">
               <img src="8.png" alt="" />
+
+              <div className={styles.collText}>
+                <p>Soft Chair</p> <MdArrowRightAlt />
+              </div>
             </div>
           </div>
           <button data-aos="fade-up">View All</button>

@@ -19,12 +19,17 @@
   width: 106px;
   height: 28px;
 }
+.navFirst {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
 
 .mid {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 50%;
+  /* width: 50%; */
 }
 
 .activeNav {
@@ -181,7 +186,7 @@
   max-width: 1440px;
   width: 100%;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   margin: 4em auto 3em;
 }
@@ -263,8 +268,13 @@
   /* background: url("/13.png"); */
   object-fit: contain;
   width: 600px;
-  height: 500px;
-  animation: upDown 1s infinite;
+  height: 600px;
+  /* animation: upDown 1s infinite; */
+}
+.headImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 @keyframes upDown {
@@ -284,8 +294,8 @@
   top: 50%;
   transform: translateY(-50%);
   right: 0%;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
 }
 .big img {
   width: 100%;
@@ -295,18 +305,20 @@
 .small {
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 298px;
-  height: 200px;
-  background: rgba(178, 118, 89, 0.05);
+  left: -15%;
+  width: 250px;
+  height: 250px;
   display: flex;
   align-items: center;
+  z-index: 11;
   justify-content: center;
 }
 .small img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border-radius: 100%;
+  box-shadow: 0px 2px 20px rgba(145, 145, 145, 0.3);
 }
 
 .service {
@@ -347,10 +359,9 @@
   font-weight: 400;
   font-size: 45px;
   line-height: 55px;
-
   letter-spacing: 0.05em;
   color: #7d5930;
-  margin-bottom: 1em;
+  margin-bottom: 12px;
   text-align: center;
 }
 .about p {
@@ -362,7 +373,7 @@
   text-align: center;
   letter-spacing: 0.05em;
   color: rgba(125, 89, 48, 0.8);
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   text-align: center;
 }
 .about button {
@@ -387,6 +398,7 @@
 .feature {
   background: rgba(216, 215, 211, 0.15);
   padding: 2em;
+  margin-top: 6em;
 }
 
 .feature h2 {
@@ -412,14 +424,40 @@
 }
 
 .colImg {
-  width: 200px;
-  height: 300px;
+  width: 300px;
+  height: 100%;
   background: #ffffff;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.collText {
+  cursor: pointer;
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.4em;
+  font-family: "Prociono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: rgba(125, 89, 48, 0.8);
+  margin-bottom: 2em;
+  text-align: center;
 }
 
 .colImg img {
-  width: 100%;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+    align-items: center;
+
+  width: 250px;
+  height: 300px;
   object-fit: contain;
 }
 .feature button {
@@ -464,6 +502,7 @@
   max-width: 1440px;
   width: 100%;
   margin: auto;
+  gap: 2em;
 }
 .last {
   width: 380px;
@@ -603,7 +642,7 @@
   object-fit: contain;
   position: relative;
   bottom: 22%;
-  animation: upDown 1s infinite;
+  /* animation: upDown 1s infinite; */
 }
 
 .imaa img {
@@ -974,15 +1013,13 @@
     width: 100%;
   }
 
-
   .ceo img {
     width: 100%;
   }
 }
 
-
 @media (max-width: 400px) {
-   .nav,
+  .nav,
   .line,
   .header,
   .service,
@@ -994,14 +1031,14 @@
     max-width: 100%;
   }
   .ceo {
-    padding: 6em .2em;
+    padding: 6em 0.2em;
   }
-    .conText h3,
+  .conText h3,
   .conText h3 span {
     font-size: 30px;
   }
   .confort {
-    padding: 4em .2em;
+    padding: 4em 0.2em;
   }
   .header {
     margin: 0em auto 3em;
